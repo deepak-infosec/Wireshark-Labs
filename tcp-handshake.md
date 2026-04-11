@@ -35,7 +35,8 @@ tcp.flags.syn == 1
 
 ## Screenshots
 
-![SYN Packet](syn.png)
+![SYN Packet](syn - Copy
+.png)
 ![SYN-ACK Packet](synack.png)
 ![ACK Packet](ack.png)
 
