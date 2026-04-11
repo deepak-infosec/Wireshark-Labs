@@ -38,10 +38,9 @@ tcp.flags.syn == 1 && tcp.flags.ack == 1
 tcp.flags.ack == 1 && tcp.flags.syn == 0
 
 ## Screenshots
-
-![SYN Packet](syn.png)
-![SYN-ACK Packet](synack.png)
-![ACK Packet](ack.png)
+![SYN Packet](screenshots/syn.png)
+![SYN-ACK Packet](screenshots/synack.png)
+![ACK Packet](screenshots/ack.png)
 
 ## Real-World Security Insight
 The TCP handshake is a critical process in network communication. Attackers can exploit this process using techniques such as SYN flood attacks, where a large number of SYN requests are sent without completing the handshake, causing resource exhaustion on the server.
