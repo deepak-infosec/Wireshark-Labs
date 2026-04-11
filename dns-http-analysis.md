@@ -23,9 +23,8 @@ tls
 
 ## Screenshots
 
-![DNS Analysis](dns.png)
-![TLS Analysis](tls.png)
-
+![DNS Analysis](screenshots/dns.png)
+![TLS Analysis](screenshots/tls.png)
 
 ## Conclusion
 Modern web traffic is encrypted using HTTPS, which protects sensitive data.
