@@ -1,52 +1,59 @@
 # TCP Handshake Analysis using Wireshark
 
 ## Objective
-To understand how TCP connections are established using the three-way handshake process.
+To analyze how TCP connections are established using the three-way handshake process in real network traffic.
 
 ## Tools Used
 - Wireshark
 
 ## Steps Performed
-- Started packet capture on Wi-Fi
-- Generated traffic by visiting websites (example.com)
+- Started packet capture on Wi-Fi interface
+- Generated traffic by visiting a website (example.com)
 - Applied TCP filters to isolate handshake packets
+- Inspected packet details to identify TCP flags
 
 ## TCP Handshake Explained
-The TCP handshake is a three-step process used to establish a reliable connection:
+The TCP three-way handshake is used to establish a reliable connection between a client and a server:
 
 1. SYN (Synchronize)
-   - Client sends a request to initiate a connection
+   - Client initiates connection by sending SYN packet
 
 2. SYN-ACK (Synchronize-Acknowledge)
-   - Server responds with acknowledgment and synchronization
+   - Server responds with SYN and ACK flags set
 
 3. ACK (Acknowledge)
-   - Client confirms the connection is established
+   - Client sends ACK to confirm connection establishment
 
 ## Findings
-- Identified SYN packets where connection starts
-- Observed SYN-ACK packets from server response
-- Detected ACK packets confirming connection
-- Verified source and destination IP addresses
+- Observed SYN packets indicating connection initiation
+- Identified SYN-ACK packets from server response
+- Detected ACK packets completing the handshake
+- Verified communication between source and destination systems
 
 ## Filters Used
 tcp
 tcp.flags.syn == 1
+tcp.flags.syn == 1 && tcp.flags.ack == 0
+tcp.flags.syn == 1 && tcp.flags.ack == 1
+tcp.flags.ack == 1 && tcp.flags.syn == 0
 
 ## Screenshots
 
-![SYN Packet](syn - Copy
-.png)
+![SYN Packet](syn.png)
 ![SYN-ACK Packet](synack.png)
 ![ACK Packet](ack.png)
 
 ## Real-World Security Insight
-Understanding TCP handshake is important because attackers can exploit this process using techniques like SYN flood attacks.
+The TCP handshake is a critical process in network communication. Attackers can exploit this process using techniques such as SYN flood attacks, where a large number of SYN requests are sent without completing the handshake, causing resource exhaustion on the server.
+
+## Privacy Note
+IP addresses in screenshots may be masked to protect privacy and follow security best practices.
 
 ## Skills Demonstrated
 - Network Traffic Analysis
 - TCP/IP Fundamentals
 - Packet Inspection using Wireshark
+- Understanding of TCP Flags and Handshake Process
 
 ## Conclusion
-The TCP handshake ensures reliable communication between client and server and is a fundamental concept in networking and cybersecurity.
+The TCP three-way handshake ensures reliable and ordered communication between client and server. Understanding this process is essential for network troubleshooting and cybersecurity analysis.
