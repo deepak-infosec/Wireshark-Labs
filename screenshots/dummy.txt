@@ -1,5 +1,5 @@
-dns.png
-tls.png
-syn.png
-synack.png
-ack.png
+screenshots/dns.png
+screenshots/tls.png
+screenshots/syn.png
+screenshots/synack.png
+screenshots/ack.png
