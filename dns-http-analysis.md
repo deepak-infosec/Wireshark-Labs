@@ -26,9 +26,11 @@ tls
 ![DNS Analysis](dns.png)
 ![TLS Analysis](tls.png)
 
-## Conclusion
-Modern web traffic is encrypted using HTTPS, which protects sensitive data.## Why TLS Instead of HTTP?
 
+## Conclusion
+Modern web traffic is encrypted using HTTPS, which protects sensitive data.
+
+## Why TLS Instead of HTTP?
 During analysis, no HTTP traffic was found because most modern websites use HTTPS instead of HTTP.
 
 HTTPS uses TLS (Transport Layer Security) to encrypt communication between the client and server.
@@ -41,3 +43,8 @@ This is why I used the "tls" filter instead of "http" to analyze secure web traf
 
 ## Key Learning
 Modern network communication is encrypted, making traffic analysis more focused on metadata rather than content.
+## Skills Demonstrated
+- Network Traffic Analysis
+- Wireshark Usage
+- DNS Analysis
+- Understanding of HTTPS/TLS Encryption
