@@ -34,6 +34,29 @@ The analysis revealed the following details of the suspected infected system:
 ## 🚨 Indicators of Suspicion
 - Unusual network activity originating from the identified host
 - Repeated communication with external IP addresses
+- ## 🔎 User Identification Analysis
+
+To identify the user associated with the infected system, deeper inspection of network traffic was performed.
+
+- Applied filters to inspect application-layer protocols such as HTTP and SMB
+- Used search functionality to locate user-related strings within packet data
+- Followed TCP streams to analyze readable content within network sessions
+
+During analysis, user-related information was identified from packet data:
+
+- **User Account:** brolf  
+- **Full Name:** Becka Rolf  
+
+This information was extracted from network communication where user details were transmitted in readable format.
+
+## 🧠 Analysis Technique Used
+- Wireshark “Follow TCP Stream” feature  
+- Packet content search (Ctrl + F)  
+- Inspection of application-layer protocols  
+
+## 🔐 Security Observation
+The presence of user information in network traffic indicates potential exposure of sensitive data.  
+In real-world environments, such data should be protected using secure encryption protocols.
 
 ## 📸 Evidence
 
